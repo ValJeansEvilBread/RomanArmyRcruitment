@@ -1,0 +1,19 @@
+
+<head>
+    <title>Welcome</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    	<div>
+    		<h4 style="color: green">Welcome to the Roman Army, soldier! Report to the Forum immediately.</h4>
+            <br>
+            <a th:href="@{/}"><button class= "btn btn-outline-success btn-block">Go Back to Home Page</button></a> 
+	    </div>  
+
+    	<div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+
+</html>

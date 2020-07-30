@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+  <head>
+    <title>Join the Roman Army!</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    	<div class="row">
+    		<div class="col-md-1">
+    		</div>
+    	    <div class="col-md-11">
+    		  	<br>
+    		    <h1 id="headertext">Join the Roman Army!</h1>
+    		    <p  id="headertext">Because why not?</p>
+    		</div>
+    	</div>
+
+       <div th:replace="fragments/navbar :: navbar" ></div>
+
+        <br>
+        <br>
+        <center>
+		<a th:href="@{enlist}"><button class= "btn btn-success">Click here to enlist!</button></a>
+		</center>
+        
+
+    <div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+
+</html>

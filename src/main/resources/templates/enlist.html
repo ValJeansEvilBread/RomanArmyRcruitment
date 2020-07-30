@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Do Your Part!</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    	<div class="row">
+    		<div class="col-md-1">
+    		</div>
+    	    <div class="col-md-11">
+    		  	<br>
+    		    <h1 id="headertext">You're almost there!</h1>
+    		    
+    		</div>
+    	</div>
+
+       <div th:replace="fragments/navbar :: navbar" ></div>
+
+        <br>
+      	<div class="row">
+
+	      <div class="col-md-6">
+	
+	         	<div class="card" style="width: 95%;">
+		          	<div class="card-body">
+			            <h5>Enlistment Form</h5>
+			         	<p>Fill in the details to complete your enlistment.</p>		
+			            <form th:action="@{/enlist}" th:object="${recruit}" method="post" autocomplete="off" >
+			                <div class="form-group">
+			                    <input type="text" th:field="*{name}" placeholder="Name" class="form-control"/>
+			                </div>
+			                <div class="form-group">
+			                    <input type="text" th:field="*{city}" placeholder="City/Town of Origin" class="form-control"/>
+			                </div>
+			                <div>
+			                <p><i>I hereby swear to faithfully serve and defend the Senate and People of Rome and to carry out every command of my superiors.</i></p>		
+			                </div>
+			                <div class="form-group">
+			                    <button class="btn btn-md btn-success btn-block" name="Submit" value="Submit" type="Submit" th:text="Submit"></button>
+			                </div>
+			            </form>
+	        		</div>
+				</div>
+			</div>
+
+	
+			<div class="col-md-6">
+		        <div class="card" style="width: 95%;">
+		          <div class="card-body">
+			            <h6 class="card-subtitle mb-2 text-muted">Terms and Conditions of Enlistment</h6>
+			            <p class="card-text"><i>
+			            	Audivistine aliquando Tragoediam Darth Plagueis Sapientis? Sic scii. Jeditum non est hanc fabulam narrare. Scriptum est apud Sithia. Darth Plagueis Dominus Ater Sithium erat, tam potens sapiensque ut Vi uti posset ad midichlorianes gubernandos, itaque vitam creare. Tantam scientiam Partis Atrae habebat ut etiam e leto amatos sibi servare posset. Pars Atra Vis via est ad multas facultates ab aliquibus monstruosas esse putatas... tam potens est factus ut timeret ille tantummodo potentiam amittere, quod scilicet tandem fecit. Infeliciter cum omnia sibi scita discipulum docuisset, iste discipulus dormientem necavit. Ironia est. alios nec se servare poterat.
+			            </i></p>
+			       </div>
+		        </div>
+	      	</div>
+      	
+      	</div>
+
+        <br>
+    	
+        
+
+    <div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+
+</html>

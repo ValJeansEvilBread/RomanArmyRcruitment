@@ -1,0 +1,36 @@
+<head>
+    <title>Recent Recruits</title>
+    <div th:replace="/fragments/styling :: head-style" ></div>
+  </head>
+
+
+  <body>
+
+    	<div class="row">
+    		<div class="col-md-1">
+    		</div>
+    	    <div class="col-md-11">
+    		  	<br>
+    		    <h1 id="headertext">Your Newest Brothers in Arms</h1>
+    		    
+    		</div>
+    	</div>
+
+       <div th:replace="fragments/navbar :: navbar" ></div>
+       
+       <br />
+
+        <div class="list-group" th:each="recruit:${recruits}">
+		    <a th:href="@{/recruits/} + ${recruit.name}" class="list-group-item list-group-item-action">
+		    	<div class="row">
+					<div class="col col-sm-6">
+		  				<h5 class="mb-1"><span th:text="${recruit.name}"></span><span> of </span> <span th:text="${recruit.city}"></span></h5>
+					</div>
+				</div>
+	  		</a>
+	    </div>  
+
+    	<div th:replace="/fragments/styling :: body-links" ></div>
+  </body>
+
+</html>
